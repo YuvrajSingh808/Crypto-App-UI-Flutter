@@ -36,10 +36,13 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^2.3.1
   unicons: ^2.1.0
-  get: ^4.6.1
+  get: ^4.6.5
   sizer: ^2.0.15
   crypto_font_icons: ^1.0.1
   fl_chart: ^0.45.1
+  http: ^0.13.5
+  firebase_core: ^2.4.1
+  firebase_auth: ^4.2.5
 
 dev_dependencies:
   flutter_test:

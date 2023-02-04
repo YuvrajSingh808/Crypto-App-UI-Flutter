@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1007834737396-lcf8pdtc1b0qimr3qtmiuo8cvnmpuqv8.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1007834737396-lcf8pdtc1b0qimr3qtmiuo8cvnmpuqv8</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAC8W-jZPeFcUpwkGc7uRVFgV7YZKsfZ3M</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1007834737396</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.mgogolowicz.cryptoApp</string>
+	<key>PROJECT_ID</key>
+	<string>bloom-1e216</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bloom-1e216.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1007834737396:ios:b1e142673552b493658ca1</string>
+</dict>
+</plist>

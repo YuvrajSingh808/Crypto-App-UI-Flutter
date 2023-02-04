@@ -5,6 +5,11 @@ import 'package:flutter/services.dart';
 import 'dart:async';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'firebase_options.dart';
+
+// ...
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -12,6 +17,9 @@ Future<void> main() async {
     DeviceOrientation.portraitDown,
     DeviceOrientation.portraitUp,
   ]);
+  // await Firebase.initializeApp(
+  //   options: DefaultFirebaseOptions.currentPlatform,
+  // );
   runApp(const MyApp());
 }
 
@@ -23,6 +31,16 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  // @override
+  // void initState() {
+  //   User? user = FirebaseAuth.instance.currentUser;
+  //   if (user != null) {
+  //     Get.offAllNamed('/home');
+  //   } else {
+  //     Get.offAllNamed('/login');
+  //   }
+  //   super.initState();
+  // }
   @override
   Widget build(BuildContext context) {
     return Sizer(builder: (context, orientation, deviceType) {

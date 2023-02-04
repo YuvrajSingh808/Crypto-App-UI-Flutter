@@ -38,7 +38,7 @@ Center balancePanel(
                     SizedBox(
                       width: 55.w,
                       child: Text(
-                        '\$${balance.toStringAsFixed(2).replaceFirst('.', ',').replaceAll(RegExp(r'\B(?=(\d{3})+(?!\d))'), '.')}',
+                        '\$${balance.toStringAsFixed(2)}',
                         style: GoogleFonts.poppins(
                           color: themeData.primaryColor,
                           letterSpacing: 1,

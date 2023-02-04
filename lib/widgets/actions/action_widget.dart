@@ -1,6 +1,9 @@
+import 'package:crypto_app/services/models.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
+
+import '../../services/api.dart';
 
 Padding actionWidget(
   IconData actionIcon,
@@ -12,7 +15,11 @@ Padding actionWidget(
     child: Column(
       children: [
         InkWell(
-          onTap: () {}, //TODO: add onTap action
+          onTap: () async {
+            // CryptoExchange cryptoExchange = await getCurrentExchangeRate('BTC', 'USD');
+            // print(cryptoExchange.lastRefreshed.toString());
+            await getLastTenTimeExchangeRate('BTC');
+          }, //TODO: add onTap action
           child: Container(
             decoration: BoxDecoration(
               color: themeData.primaryColor.withOpacity(0.05),

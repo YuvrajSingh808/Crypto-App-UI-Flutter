@@ -6,15 +6,24 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 
+import '../../services/models.dart';
+
 Padding chartHomePage(
   bool isHomePage,
   IconData cryptoIcon,
   String crypto,
   String cryptoCode,
   String exchangeCurrency,
-  List<FlSpot> spots,
+  List<DailyDatum> dailyData,
   ThemeData themeData,
 ) {
+  List<FlSpot>
+  spots = dailyData
+      .asMap()
+      .entries
+      .map((e) => FlSpot(e.key.toDouble(), double.parse(e.value.highInr)))
+      .toList();
+
   Rx<double> minY = 0.0.obs;
   Rx<double> maxY = 0.0.obs;
   List sortedSpots = spots.toList();
@@ -35,8 +44,6 @@ Padding chartHomePage(
             crypto: crypto,
             cryptoCode: cryptoCode,
             exchangeCurrency: exchangeCurrency,
-            spots: spots,
-            profitPercent: profitPercent,
             maxY: maxY.value,
             minY: minY.value,
           ),
@@ -95,8 +102,9 @@ Padding chartHomePage(
                     width: 90.w,
                     height: 10.h,
                     child: Obx(
-                      () => LineChart(chart(isHomePage, spots, minY.value,
-                          maxY.value, profitPercent >= 0)),
+                      () => LineChart(chart(isHomePage, spots, dailyData, minY.value,
+                          maxY.value, profitPercent >= 0, 'daily')
+                          ),
                     ),
                   ),
                 ),
